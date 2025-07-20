@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CalmSutra- Calm Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo2.png" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('calmzoneimg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    /* Navigation Buttons */
+    .nav-button1,
+    .nav-button2,
+    .nav-button3,
+    .nav-button4,
+    .nav-button5,
+    .nav-button6,
+    .nav-button7,
+    .nav-button8,
+    .nav-button9,
+    .nav-button10 {
+      border-width: 2px;
+      font-style: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 4px;
+      font-size: larger;
+      padding: 10px;
+      margin: 12px;
+    }
+
+    .nav-button1 {
+      border-color: rgba(158, 248, 160, 0.808);
+    }
+
+    .nav-button2 {
+      border-color: rgb(77, 229, 240);
+    }
+
+    .nav-button3 {
+      border-color: rgba(217, 143, 231, 0.808);
+    }
+
+    .nav-button4 {
+      border-color: rgb(230, 170, 170);
+    }
+
+    .nav-button5 {
+      border-color: rgba(131, 234, 215, 0.808);
+    }
+
+    .nav-button6 {
+      border-color: rgba(105, 188, 233, 0.808);
+    }
+
+    .nav-button7 {
+      border-color: rgba(232, 99, 126, 0.808);
+    }
+
+    .nav-button8 {
+      border-color: rgba(98, 218, 148, 0.808);
+    }
+
+    .nav-button9 {
+      border-color: rgb(225, 241, 99);
+    }
+
+    .nav-button10 {
+      border-color: rgba(217, 143, 231, 0.808);
+    }
+
+    .nav-button1:hover,
+    .nav-button2:hover,
+    .nav-button3:hover,
+    .nav-button4:hover,
+    .nav-button5:hover,
+    .nav-button6:hover,
+    .nav-button7:hover,
+    .nav-button8:hover,
+    .nav-button9:hover,
+    .nav-button10:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      background-color: rgb(48, 238, 121)
+    }
+
+    /* Calm Zone Styling */
+    h2,
+    h3 {
+      text-align: center;
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      color: #5f0697;
+      margin-top: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      font-weight: 500;
+      color: #222;
+      margin: 20px auto;
+      width: 80%;
+      background-color: rgba(220, 157, 239, 0.75);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 8px rgba(0, 0, 0, 0);
+    }
+
+    ul {
+      list-style-type: square;
+      width: fit-content;
+      margin: 0 auto;
+      padding-left: 1em;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    ul li {
+      margin: 12px 0;
+      font-size: 17px;
+      color: #333;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: rgb(34, 139, 118);
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+
+    ul li a:hover {
+      color: rgb(92, 4, 96);
+      text-decoration: underline;
+      padding-left: 5px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      color: #444;
+      text-align: center;
+    }
+
+    footer a {
+      color: rgb(68, 143, 110);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Let It Go Box and Emotion Check-in */
+    .let-go-box,
+    .emotion-checkin {
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 12px;
+      padding: 25px;
+      width: 80%;
+      margin: 30px auto;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .let-go-box textarea {
+      width: 100%;
+      height: 100px;
+      border: 2px solid rgba(74, 4, 85, 0.808);
+      border-radius: 8px;
+      font-size: 16px;
+      padding: 10px;
+      resize: none;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .let-go-box button {
+      margin-top: 10px;
+      background-color: rgba(73, 7, 131, 0.792);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .emotion-checkin select {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      border: 2px solid rgba(131, 234, 215, 0.808);
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <div>
+        <img src="logo2.png" alt="CalmSutra Logo"
+          style="width: 100px; height: 100px; float: left; margin:0px; padding: 0px">
+      </div>
+      <h1 style="text-align: center; font-family: 'Segoe UI', 'Arial Black', 'Arial', 'sans-serif';">CalmSutra</h1>
+      <h4
+        style="text-align: center; font-style:italic; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        <b> Heal out with your finger tips! </b>
+      </h4>
+    </div>
+    <hr>
+  </header>
+
+  <!-- Navigation Buttons -->
+  <button class="nav-button1"><a href="home.html">Home</a></button>
+  <button class="nav-button2"><a href="login.html">Login</a></button>
+  <button class="nav-button3"><a href="calmZone.html">Calm Zone</a></button>
+  <button class="nav-button4"><a href="affirmationWall.html">Affirmation Wall</a></button>
+  <button class="nav-button5"><a href="soothingSounds.html">Soothing Sounds</a></button>
+  <button class="nav-button6"><a href="toDoLists.html">To do lists</a></button>
+  <button class="nav-button7"><a href="stretchItOut.html">Stretch it out</a></button>
+  <button class="nav-button8"><a href="foodForMood.html">Food for Mood</a></button>
+  <button class="nav-button9"><a href="frustrateItOut.html">Frustrate it Out</a></button>
+  <button class="nav-button10"><a href="aboutUs.html">About Us</a></button>
+  <hr>
+
+  <!-- Calm Zone Content -->
+  <h2>Calm Zone</h2>
+  <p>
+    Welcome to the Calm Zone, a place for relaxation and tranquility.<br>
+    At CalmSutra, we believe in the power of mindfulness and relaxation techniques to enhance overall well-being. Our
+    mission is to provide a serene space where individuals can unwind and rejuvenate.<br>
+    Explore our range of services designed to help you find your inner calm:
+  </p>
+
+
+
+  <!-- Add-On Features Below -->
+
+  <section class="let-go-box">
+    <h3>Let It Go Box ✨</h3>
+    <p>Write down what’s weighing on your heart. Sometimes, just expressing it is enough.</p>
+    <form>
+      <textarea placeholder="Type your thoughts here..."></textarea><br>
+      <button type="submit">Let It Go</button>
+      <p style="font-size: 12px; color: #555;">*(Feature coming soon)*</p>
+    </form>
+  </section>
+
+  <section class="emotion-checkin">
+    <h3>Emotion Check-In 🌈</h3>
+    <p>How are you feeling right now?</p>
+    <form>
+      <label for="emotion-select">Choose an emotion:</label><br>
+      <select id="emotion-select">
+        <option value="calm">Calm</option>
+        <option value="anxious">Anxious</option>
+        <option value="happy">Happy</option>
+        <option value="angry">Angry</option>
+        <option value="overwhelmed">Overwhelmed</option>
+        <option value="hopeful">Hopeful</option>
+      </select>
+    </form>
+  </section>
+
+  <section>
+    <h3>Explore More Calm Tools</h3>
+    <ul>
+      <li><strong>Daily Gratitude Prompt:</strong> Reflect on one thing you’re thankful for today.</li>
+      <li><strong>5-4-3-2-1 Grounding Technique:</strong> Use your senses to calm your thoughts.</li>
+      <li><strong>Calm Affirmations:</strong> Read uplifting thoughts to ease your mind.</li>
+      <li><strong>Mood Tracker:</strong> Track your feelings each day in a simple notebook.</li>
+      <li><strong>Mini Calm Challenges:</strong> Try 1-minute focus tasks like mindful sipping or breath holding.</li>
+      <li><strong>Visual Breathing Guide:</strong> Sync your breath with visual patterns.</li>
+    </ul>
+  </section>
+
+  <section>
+    <footer>
+      <h6>&copy; Built by Yashvi Thakkar<br>For more details kindly reach out through <a
+          href="mailto:yashvithakkar0929@gmail.com">Email</a></h6>
+    </footer>
+  </section>
+
+</body>
+
+</html>

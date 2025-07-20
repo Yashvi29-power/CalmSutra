@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CalmSutra- To do lists</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo2.png" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('lightblue.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .nav-button1,
+    .nav-button2,
+    .nav-button3,
+    .nav-button4,
+    .nav-button5,
+    .nav-button6,
+    .nav-button7,
+    .nav-button8,
+    .nav-button9,
+    .nav-button10 {
+      border-width: 2px;
+      font-style: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 4px;
+      font-size: larger;
+      padding: 10px;
+      margin: 12px;
+    }
+
+    .nav-button1 {
+      border-color: rgba(158, 248, 160, 0.808);
+    }
+
+    .nav-button2 {
+      border-color: rgb(77, 229, 240);
+    }
+
+    .nav-button3 {
+      border-color: rgba(217, 143, 231, 0.808);
+    }
+
+    .nav-button4 {
+      border-color: rgb(230, 170, 170);
+    }
+
+    .nav-button5 {
+      border-color: rgba(131, 234, 215, 0.808);
+    }
+
+    .nav-button6 {
+      border-color: rgba(105, 188, 233, 0.808);
+    }
+
+    .nav-button7 {
+      border-color: rgba(232, 99, 126, 0.808);
+    }
+
+    .nav-button8 {
+      border-color: rgba(98, 218, 148, 0.808);
+    }
+
+    .nav-button9 {
+      border-color: rgb(225, 241, 99);
+    }
+
+    .nav-button10 {
+      border-color: rgba(217, 143, 231, 0.808);
+    }
+
+    .nav-button1:hover,
+    .nav-button2:hover,
+    .nav-button3:hover,
+    .nav-button4:hover,
+    .nav-button5:hover,
+    .nav-button6:hover,
+    .nav-button7:hover,
+    .nav-button8:hover,
+    .nav-button9:hover,
+    .nav-button10:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      background-color: rgb(48, 238, 121);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      color: #222;
+      margin: 20px auto;
+      width: 80%;
+      background-color: rgba(156, 191, 236, 0.966);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 8px rgba(0, 0, 0, 0);
+    }
+
+    .todo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      border: 2px solid #0449a4;
+      border-radius: 12px;
+      padding: 20px;
+      background-color: rgba(206, 222, 236, 0.966);
+      width: 300px;
+      min-height: 400px;
+    }
+
+    .box h3 {
+      text-align: center;
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      font-weight: 900;
+      color: #0449a4;
+    }
+
+    .box p {
+      font-size: 16px;
+      font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+      font-weight: 500;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <div>
+        <img src="logo2.png" alt="CalmSutra Logo"
+          style="width: 100px; height: 100px; float: left; margin:0px; padding: 0px">
+      </div>
+      <h1 style="text-align: center; font-family: 'Segoe UI', 'Arial Black', 'Arial', 'sans-serif';">CalmSutra</h1>
+      <h4
+        style="text-align: center; font-style:italic; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        <b> Heal out with your finger tips! </b>
+      </h4>
+    </div>
+    <hr>
+  </header>
+
+  <button class="nav-button1"><a href="home.html">Home</a></button>
+  <button class="nav-button2"><a href="login.html">Login</a></button>
+  <button class="nav-button3"><a href="calmZone.html">Calm Zone</a></button>
+  <button class="nav-button4"><a href="affirmationWall.html">Affirmation Wall</a></button>
+  <button class="nav-button5"><a href="soothingSounds.html">Soothing Sounds</a></button>
+  <button class="nav-button6"><a href="toDoLists.html">To do lists</a></button>
+  <button class="nav-button7"><a href="stretchItOut.html">Stretch it out</a></button>
+  <button class="nav-button8"><a href="foodForMood.html">Food for Mood</a></button>
+  <button class="nav-button9"><a href="frustrateItOut.html">Frustrate it Out</a></button>
+  <button class="nav-button10"><a href="aboutUs.html">About Us</a></button>
+  <hr>
+
+  <h2
+    style="text-align: center;  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;  font-weight: 900; margin-top: 20px; margin-bottom: 20px; color: #0449a4;">
+    To do lists</h2>
+  <p>What to do when you are feeling anxious, depressed, angry and so on? We are having some <b>To do lists</b> to help
+    you navigate through these emotions.</p>
+
+  <div class="todo-container">
+    <div class="box anxiety">
+      <h3>Anxiety</h3>
+      <p>1. Take deep breaths.</p>
+      <p>2. Go for a walk.</p>
+      <p>3. Listen to calming music.</p>
+      <p>4. Write down your thoughts.</p>
+      <p>5. Practice mindfulness or meditation.</p>
+    </div>
+
+    <div class="box depression">
+      <h3>Depression</h3>
+      <p>1. Reach out to a friend.</p>
+      <p>2. Engage in a hobby.</p>
+      <p>3. Write a journal.</p>
+      <p>4. Seek professional help.</p>
+      <p>5. Practice mindfulness or meditation.</p>
+    </div>
+
+    <div class="box anger">
+      <h3>Anger</h3>
+      <p>1. Count to ten before reacting.</p>
+      <p>2. Take a break from the situation.</p>
+      <p>3. Write down your feelings.</p>
+      <p>4. Engage in physical activity.</p>
+      <p>5. Practice deep breathing exercises.</p>
+    </div>
+
+    <div class="box stress">
+      <h3>Stress</h3>
+      <p>1. Identify the source of stress.</p>
+      <p>2. Practice time management.</p>
+      <p>3. Take breaks and relax.</p>
+      <p>4. Engage in physical activity.</p>
+      <p>5. Practice deep breathing exercises.</p>
+    </div>
+  </div>
+
+  <section>
+    <footer>
+      <h6 style="text-align: center;">&copy; Built by Yashvi Thakkar<br>For more details kindly reach out through <a
+          href="mailto:yashvithakkar0929@gmail.com">Email</a></h6>
+    </footer>
+  </section>
+</body>
+
+</html>
