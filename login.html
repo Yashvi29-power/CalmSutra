@@ -282,8 +282,9 @@
                 </span>
             </div>
 
+
+        </form>
     </div>
-    </form>
     <footer>
         <br>
         <br>
@@ -294,5 +295,50 @@
                 href="yashvithakkar0929@gmail.com">Email</a></h6>
     </footer>
 
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Username Validation
+            if (username.length < 3) {
+                alert("⚠️ Username must be at least 3 characters long.");
+                e.preventDefault();
+                return;
+            }
+
+            // Email Validation
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert("⚠️ Enter a valid email address.");
+                e.preventDefault();
+                return;
+            }
+
+            // Password Validation
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("⚠️ Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.");
+                e.preventDefault();
+                return;
+            }
+
+            // Confirm Password Validation
+            if (password !== confirmPassword) {
+                alert("❌ Passwords do not match.");
+                e.preventDefault();
+                return;
+            }
+
+            // Optional: Success Message
+            alert("✅ All validations passed! Logging you in...");
+        });
+    </script>
+
+
+
 </body>
-<html>
+
+</html>
