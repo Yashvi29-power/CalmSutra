@@ -246,6 +246,23 @@
       color: rgb(1, 67, 1);
       font-weight: 500;
     }
+
+    .image-slider button {
+
+
+
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .image-slider button:hover {
+      background-color: #e76f51;
+      transform: scale(1.05);
+    }
+
+    .image-slider {
+      text-align: center;
+    }
   </style>
 
 
@@ -256,62 +273,87 @@
     alleviate these feelings.<br>Here are some foods that can help boost your mood:</p>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">1. For Stress</h3>
   <div class="food food1">Foods rich in Vitamin C, such as oranges and strawberries, can help reduce stress levels.
-    <div>
-      <img src="stressfood.png" alt="Stress Food"
+    <div class="image-slider" style="text-align: center;">
+      <img src="stressfood.png" class="slider-img" id="slider-stress"
         style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+      <br>
+      <button onclick="prevImage('stress')">⟨ Previous</button>
+      <button onclick="nextImage('stress')">Next ⟩</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">2. For Depression</h3>
   <div class="food food2">Omega-3 fatty acids found in fatty fish like salmon and walnuts can help combat depression.
-    <div>
-      <img src="depressionfood.png" alt="Depression Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="depressionfood.png" alt="Depression Food" id="slider-depression"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('depression')">Previous</button>
+      <button onclick="nextImage('depression')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">3. For Anxiety</h3>
   <div class="food food3">Foods high in magnesium, like spinach and almonds, can help reduce anxiety.
-    <div>
-      <img src="anxietyfood.png" alt="Anxiety Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="anxietyfood.png" alt="Anxiety Food" id="slider-anxiety"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('anxiety')">Previous</button>
+      <button onclick="nextImage('anxiety')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">4. For Anger</h3>
   <div class="food food4">Foods rich in antioxidants, such as blueberries and dark chocolate, can help calm anger.
-    <div>
-      <img src="antioxidantfood.png" alt="Antioxidants Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="antioxidantfood.png" alt="Antioxidants Food" id="slider-anger"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('anger')">Previous</button>
+      <button onclick="nextImage('anger')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">5. For Frustration</h3>
   <div class="food food5">Complex carbohydrates like whole grains such as oats and brown rice can help stabilize blood
     sugar levels and
     reduce frustration.
-    <div>
-      <img src="frustrationfood.png" alt="Frustration Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="frustrationfood.png" alt="Frustration Food" id="slider-frustration"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('frustration')">Previous</button>
+      <button onclick="nextImage('frustration')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">6. For Bad Mood</h3>
   <div class="food food6">Foods rich in tryptophan, such as turkey and bananas, can help improve your mood.
-    <div>
-      <img src="moodfood.png" alt="Mood Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="moodfood.png" alt="Mood Food" id="slider-mood"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('mood')">Previous</button>
+      <button onclick="nextImage('mood')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">7. For Overthinking</h3>
   <div class="food food7">Foods high in omega-3 fatty acids, like flaxseeds and chia seeds, can help reduce
     overthinking.
-    <div>
-      <img src="overthinkingfood.png" alt="Overthinking Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="overthinkingfood.png" alt="Overthinking Food" id="slider-overthinking"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('overthinking')">Previous</button>
+      <button onclick="nextImage('overthinking')">Next</button>
     </div>
+
   </div>
   <h3 style="text-align: center;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">8. For Tension</h3>
   <div class="food food8">Herbal teas like chamomile and peppermint can help relax your mind and reduce tension.
-    <div>
-      <img src="tensionfood.png" alt="Tension Food"
-        style="width: 350px; height: 300px; margin:auto; display: block; padding: 10px; border-radius: 20px;">
+    <div class="image-slider" style="text-align: center; padding: 10px;">
+      <img src="tensionfood.png" alt="Tension Food" id="slider-tension"
+        style="width: 350px; height: 300px; margin: auto; display: block; border-radius: 20px;">
+      <button onclick="prevImage('tension')">Previous</button>
+      <button onclick="nextImage('tension')">Next</button>
     </div>
+
   </div>
 
 
@@ -322,6 +364,74 @@
 
     </footer>
   </section>
+
+  <script>
+    const moodImages = {
+      stress: [
+        "stressfood.png",
+        "stress1.png",
+        "stress2.png",
+      ],
+      anger: [
+        "antioxidantfood.png",
+        "anger1.png",
+        "anger2.png",
+      ],
+      anxiety: [
+        "anxietyfood.png",
+        "anxiety1.png",
+        "anxiety2.png",
+      ],
+      depression: [
+        "depressionfood.png",
+        "depression1.png",
+        "depression2.png",
+      ],
+      frustration: [
+        "frustrationfood.png",
+        "frustration1.png",
+        "frustration2.png",
+      ],
+      mood: [
+        "moodfood.png",
+        "mood1.png",
+        "mood2.png",
+      ],
+      overthinking: [
+        "overthinkingfood.png",
+        "overthinking1.png",
+        "overthinking2.png",
+      ],
+      tension: [
+        "tensionfood.png",
+        "tension1.png",
+        "tension2.png",
+      ]
+    };
+
+    const currentIndex = {};
+
+    function showImage(mood) {
+      const imageElement = document.getElementById(`slider-${mood}`);
+      if (imageElement && moodImages[mood]) {
+        imageElement.src = moodImages[mood][currentIndex[mood]];
+      }
+    }
+
+    function nextImage(mood) {
+      if (currentIndex[mood] === undefined) currentIndex[mood] = 0;
+      currentIndex[mood] = (currentIndex[mood] + 1) % moodImages[mood].length;
+      showImage(mood);
+    }
+
+    function prevImage(mood) {
+      if (currentIndex[mood] === undefined) currentIndex[mood] = 0;
+      currentIndex[mood] = (currentIndex[mood] - 1 + moodImages[mood].length) % moodImages[mood].length;
+      showImage(mood);
+    }
+  </script>
+
+
 </body>
 
 </html>
