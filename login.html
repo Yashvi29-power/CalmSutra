@@ -320,7 +320,7 @@
             // Password Validation
             const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
             if (!passwordPattern.test(password)) {
-                alert("⚠️ Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.");
+                alert("⚠️ Password must be at least 8 characters long and include uppercase, lowercase, number and special character.");
                 e.preventDefault();
                 return;
             }
