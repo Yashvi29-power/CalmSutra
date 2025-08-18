@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic JSON Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .box {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      background: #f9f9f9;
+      margin-bottom: 5px;
+      border-radius: 6px;
+    }
+    #fileInput {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event & Student Profiles</h1>
+  <input type="file" id="fileInput" accept=".json">
+  <div class="container">
+    <div class="box" id="events">
+      <h2>Events</h2>
+      <ul id="eventList"></ul>
+    </div>
+    <div class="box" id="students">
+      <h2>Students</h2>
+      <ul id="studentList"></ul>
+    </div>
+  </div>
+
+  <script>
+    // Default JSON Data
+    const defaultData = {
+      "events": [
+        {"id": 1, "name": "Hackathon", "date": "2025-08-20"},
+        {"id": 2, "name": "Workshop", "date": "2025-09-01"},
+        {"id": 3, "name": "Webinar on AI", "date": "2025-09-15"}
+      ],
+      "students": [
+        {"id": 101, "name": "Yashvi", "email": "yashvi@1.com"},
+        {"id": 102, "name": "Priyal", "email": "priyal@2.com"},
+        {"id": 103, "name": "Diya", "email": "diya@3.com"}
+      ]
+    };
+
+    const eventList = document.getElementById('eventList');
+    const studentList = document.getElementById('studentList');
+
+    // Function to Render Data
+    function renderData(data) {
+      eventList.innerHTML = "";
+      studentList.innerHTML = "";
+
+      // Render Events
+      data.events.forEach(event => {
+        const li = document.createElement('li');
+        li.textContent = `${event.name} (Date: ${event.date})`;
+        eventList.appendChild(li);
+      });
+
+      // Render Students
+      data.students.forEach(student => {
+        const li = document.createElement('li');
+        li.textContent = `${student.name} - ${student.email}`;
+        studentList.appendChild(li);
+      });
+    }
+
+    // Initial Render with Default Data
+    renderData(defaultData);
+
+    // Handle File Upload
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          try {
+            const data = JSON.parse(e.target.result);
+            renderData(data);
+          } catch (err) {
+            alert("Invalid JSON file!");
+          }
+        };
+        reader.readAsText(file);
+      }
+    });
+  </script>
+</body>
+</html>
