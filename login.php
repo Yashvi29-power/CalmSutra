@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
         // Insert data into table
-        $sql = "INSERT INTO users_php (Name, Email, Password) VALUES ('$uname', '$email', '$hashedPass')";
+        $sql = "INSERT INTO login (Name, Email, Password) VALUES ('$uname', '$email', '$hashedPass')";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
