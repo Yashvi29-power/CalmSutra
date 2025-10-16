@@ -1,3 +1,47 @@
+<?php
+// ===========================
+// 1️⃣ DATABASE CONNECTION
+// ===========================
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "CalmSutra";  
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// ===========================
+// 2️⃣ FORM SUBMISSION LOGIC
+// ===========================
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $uname = $_POST['username'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $confirmPass = $_POST['confirmPassword'];
+
+    // Validate passwords match
+    if ($pass !== $confirmPass) {
+        echo "<script>alert('❌ Passwords do not match.');</script>";
+    } else {
+        // Hash password before saving (NEVER store plain passwords)
+        $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+
+        // Insert data into table
+        $sql = "INSERT INTO users_php (Name, Email, Password) VALUES ('$uname', '$email', '$hashedPass')";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+            echo "<script>alert('✅ Login details saved successfully!');</script>";
+        } else {
+            echo "<script>alert('⚠️ Error saving data: " . mysqli_error($conn) . "');</script>";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
