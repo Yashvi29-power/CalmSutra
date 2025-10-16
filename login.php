@@ -278,21 +278,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" style="text-align: center; ">
             <label for="username"
                 style="font-size: larger;  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Username:</strong></label><br><br>
-            <input type="text" id="username" placeholder="Enter your name: " required autofocus><br><br>
+            <input type="text" name="username" id="username" placeholder="Enter your name: " required autofocus><br><br>
 
             <label for="email"
                 style="font-size: larger;  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Email:</strong></label><br><br>
-            <input type="text" id="email" placeholder="Enter your email: " required autofocus><br><br>
+            <input type="text" name="email" id="email" placeholder="Enter your email: " required autofocus><br><br>
 
             <label for="password"
                 style="font-size: larger; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Password:</strong></label><br><br>
-            <input type="password" id="password" placeholder="Enter your password" required autofocus><br><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required autofocus><br><br>
 
             <label for="confirmPassword"
                 style="font-size: larger; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Confirm
                     Password:</strong></label><br><br>
 
-            <input type="password" id="confirmPassword" placeholder="Confirm your password" required autofocus><br><br>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required autofocus><br><br>
 
             <button class="nav-button" type="Submit" style="border-color: rgba(0, 12, 1, 0.808);
             border-width: 2px;
