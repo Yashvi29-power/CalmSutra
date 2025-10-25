@@ -47,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $_SESSION['username'] = isset($uname) ? $uname : '';
 $_SESSION['email'] = isset($email) ? $email : '';
-$_SESSION['password'] = isset($pass) ? $pass : '';
 
 ?>
 
