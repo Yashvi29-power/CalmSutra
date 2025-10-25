@@ -43,10 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// sessions
-
-$_SESSION['username'] = isset($uname) ? $uname : '';
-$_SESSION['email'] = isset($email) ? $email : '';
 
 ?>
 
