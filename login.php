@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // ===========================
 // 1️⃣ DATABASE CONNECTION
 // ===========================
@@ -42,8 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // sessions
- 
-session_start();
+
 $_SESSION['username'] = isset($uname) ? $uname : '';
 $_SESSION['email'] = isset($email) ? $email : '';
 $_SESSION['password'] = isset($pass) ? $pass : '';
